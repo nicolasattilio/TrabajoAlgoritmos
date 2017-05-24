@@ -60,7 +60,20 @@ int main(){
 */
     ///---------------Arreglo------------------------------
 
-
+    Arreglo<unsigned int> miArreglo;
+    cout<<miArreglo.longArreglo()<<endl;
+    miArreglo.agregarArreglo(33,1);
+    miArreglo.agregarArreglo(25,2);
+    miArreglo.agregarArreglo(4,4);
+    cout<<miArreglo.longArreglo()<<endl;
+    miArreglo.agregarArreglo(3,4);
+    miArreglo.agregarArreglo(1,1);
+    cout<<miArreglo.longArreglo()<<endl;
+    cout<<"ELEMENTO :"<<miArreglo.darElemento(1)<<endl;
+    cout<<"ELEMENTO :"<<miArreglo.darElemento(2)<<endl;
+    cout<<"ELEMENTO :"<<miArreglo.darElemento(3)<<endl;
+    cout<<"ELEMENTO :"<<miArreglo.darElemento(4)<<endl;
+    cout<<"ELEMENTO :"<<miArreglo.darElemento(5)<<endl;
 return 0;
 }
 

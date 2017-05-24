@@ -38,16 +38,22 @@
 
 1465785584 c:\users\nico\desktop\trabajo especial\arbole.h
 
-1495640274 source:c:\users\nico\desktop\facultad\trabajo especial\main.cpp
+1495667698 source:c:\users\nico\desktop\facultad\trabajo especial\main.cpp
 	<cstddef>
 	<iostream>
 	"Lista.h"
+	"Arreglo.h"
 
 1495638524 c:\users\nico\desktop\facultad\trabajo especial\lista.h
 
-1495640288 source:c:\users\nico\desktop\facultad\trabajo especial\lista.cpp
+1495664061 source:c:\users\nico\desktop\facultad\trabajo especial\lista.cpp
 	"Lista.h"
 	<cstddef>
 
-1495550737 source:c:\users\nico\desktop\facultad\trabajo especial\arreglo.cpp
+1495667993 source:c:\users\nico\desktop\facultad\trabajo especial\arreglo.cpp
+	"Arreglo.h"
+	<cstddef>
+	<iostream>
+
+1495636170 c:\users\nico\desktop\facultad\trabajo especial\arreglo.h
 
