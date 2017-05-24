@@ -38,16 +38,16 @@
 
 1465785584 c:\users\nico\desktop\trabajo especial\arbole.h
 
-1495416913 source:c:\users\nico\desktop\facultad\trabajo especial\main.cpp
+1495640274 source:c:\users\nico\desktop\facultad\trabajo especial\main.cpp
 	<cstddef>
 	<iostream>
 	"Lista.h"
 
-1495417633 c:\users\nico\desktop\facultad\trabajo especial\lista.h
+1495638524 c:\users\nico\desktop\facultad\trabajo especial\lista.h
 
-1495417697 source:c:\users\nico\desktop\facultad\trabajo especial\lista.cpp
+1495640288 source:c:\users\nico\desktop\facultad\trabajo especial\lista.cpp
 	"Lista.h"
-	<cassert>
 	<cstddef>
-	<iostream>
+
+1495550737 source:c:\users\nico\desktop\facultad\trabajo especial\arreglo.cpp
 

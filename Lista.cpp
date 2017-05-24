@@ -1,9 +1,8 @@
 #include "Lista.h"
-#include <cassert>
 #include <cstddef>
-#include <iostream>
 
-using namespace std;
+
+
 template <typename generico> Lista<generico>::Lista(){
     dato=NULL;
 }
@@ -84,7 +83,6 @@ template <typename generico> void Lista<generico>::eliminarElemento(const generi
                 auxPunt = auxPunt2;
                 auxPunt2 = auxPunt->sig;
                 auxPunt->sig =auxPunt2->sig;
-                cout<<"El elemento "<<auxPunt2->elem<<" ha sido eliminado"<<endl;
                 delete auxPunt2;
             }
             else{
@@ -110,16 +108,40 @@ template <typename generico> void Lista<generico>::eliminartodo(){
     }
 }
 
-template <typename generico> void Lista<generico>::mostrar(int index){
+template <typename generico> generico Lista<generico>::mostrar(int index) const{
     int diferencia;
     nodoLista * auxPunt;
     auxPunt = dato;
-    for (diferencia = 0;diferencia<index;diferencia++)
+    for (diferencia = 1;diferencia<index;diferencia++)
             if (auxPunt!=NULL)
                 auxPunt = auxPunt->sig;
     if (diferencia==index)
-        cout<<auxPunt->elem<<", ";
+        return auxPunt->elem;
+}
+
+
+template <typename generico> generico Lista<generico>::mostrarElemento(){
+    nodoLista*auxPunt;
     auxPunt=dato;
+    if (auxPunt!=NULL)
+        return auxPunt->elem;
+    else{
+        dato=punteroLista;
+         return NULL;
+    }
+}
+
+template <typename generico> void Lista<generico>::siguiente(){
+    if (punteroLista==NULL)
+        punteroLista=dato;
+    nodoLista * auxPunt;
+    auxPunt =dato;
+     if (auxPunt->sig!=NULL){
+        auxPunt = auxPunt->sig;
+        dato = auxPunt;
+    }
+    else
+        dato=NULL;
 }
 
 

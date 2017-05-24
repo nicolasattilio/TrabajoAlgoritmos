@@ -15,13 +15,16 @@ class Lista
         bool esVacia();
         void eliminarElemento(const generico & elem);
         void eliminartodo();
-        void mostrar(int index);  //Consultar
+        void siguiente();
+        generico mostrar(int index) const;
+        generico mostrarElemento();
 
     private:
         struct nodoLista{
         generico elem;
         nodoLista * sig;
         };
+        nodoLista * punteroLista;
         nodoLista * dato;
         void vaciar();
 };
