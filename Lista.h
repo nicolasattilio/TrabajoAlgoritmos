@@ -16,7 +16,7 @@ class Lista
         void eliminarElemento(const generico & elem);
         void eliminartodo();
         void siguiente();
-        generico mostrar(int index) const;
+        generico mostrarPorIndice(int index) const;
         generico mostrarElemento();
 
     private:

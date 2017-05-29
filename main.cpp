@@ -9,7 +9,7 @@ using namespace std;
 
 int main(){
     ///---------------Lista------------------------------
-    /*cout<<"LISTA"<<endl;
+    cout<<"LISTA"<<endl;
     Lista<unsigned int> miLista;
     miLista.agregarPrincipio(15);
     miLista.agregarPrincipio(5);
@@ -23,7 +23,7 @@ int main(){
     else
         cout<<"La lista tiene elementos."<<endl;
 
-    cout<<"Elemento a buscar en la posicion posicion 2 :"<<miLista.mostrar(2)<<endl;
+    cout<<"Elemento a buscar en la posicion posicion 4 :"<<miLista.mostrarPorIndice(4)<<endl;
 
 
     cout<<endl;
@@ -57,10 +57,10 @@ int main(){
     else
         cout<<"La lista tiene elementos."<<endl;
 
-*/
+
     ///---------------Arreglo------------------------------
 
-    Arreglo<unsigned int> miArreglo;
+    /*Arreglo<unsigned int> miArreglo;
     cout<<miArreglo.longArreglo()<<endl;
     miArreglo.agregarArreglo(33,1);
     miArreglo.agregarArreglo(25,2);
@@ -73,7 +73,7 @@ int main(){
     cout<<"ELEMENTO :"<<miArreglo.darElemento(2)<<endl;
     cout<<"ELEMENTO :"<<miArreglo.darElemento(3)<<endl;
     cout<<"ELEMENTO :"<<miArreglo.darElemento(4)<<endl;
-    cout<<"ELEMENTO :"<<miArreglo.darElemento(5)<<endl;
+    cout<<"ELEMENTO :"<<miArreglo.darElemento(5)<<endl;*/
 return 0;
 }
 
