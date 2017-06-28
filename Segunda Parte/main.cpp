@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 void addElementsMatrix(Matriz<int> & MatrizA,int longitud){
 for(int i=0;i<longitud;i++)
     for(int j=0;j<longitud;j++){
@@ -29,17 +28,60 @@ for(int i=0;i<longitud;i++){
 }
 }
 
-int main()
-{
-int longitud=0;
-int longitudaux=0;
-int k=0;
+void strassen(Matriz<int> MatrizA,Matriz<int> MatrizB,Matriz<int> MatrizC){
 int t;
 int r;
+//BLOQUE 1
+MatrizA.suma(0,0,1,1,t);
+MatrizB.suma(0,0,1,1,r);
+int I=t*r;
+//FIN BLOQUE 1
+//BLOQUE 2
+MatrizA.suma(1,0,1,1,t);
+r=MatrizB.getvalue(0,0);
+int II=t*r;
+//FIN BLOQUE 2
+//BLOQUE 3
+r=MatrizA.getvalue(0,0);
+MatrizB.resta(0,1,1,1,t);
+int III=t*r;
+//FIN BLOQUE 3
+//BLOQUE 4
+r=MatrizA.getvalue(1,1);
+MatrizB.resta(1,0,0,0,t);
+int IV=t*r;
+//FIN BLOQUE 4
+//BLOQUE 5
+MatrizA.suma(0,0,0,1,t);
+r=MatrizB.getvalue(1,1);
+int V=t*r;
+//FIN BLOQUE 5
+//BLOQUE 6
+MatrizA.resta(1,0,0,0,t);
+MatrizB.suma(0,0,0,1,r);
+int VI=t*r;
+//FIN BLOQUE 6
+//BLOQUE 7
+MatrizA.resta(0,1,1,1,t);
+MatrizB.suma(1,0,1,1,r);
+int VII=t*r;
+//FIN BLOQUE 7
+
+MatrizC.setvalue(0,0,(I+IV-V+VII));
+MatrizC.setvalue(0,1,(III+V));
+MatrizC.setvalue(1,0,(II+IV));
+MatrizC.setvalue(1,1,(I+III-II+VI));
+
+}
+
+int main(){
+int longitud=0;
+int k=0;
+
 cout<<"Flaco pasame el tamanio de la matriz"<<endl;
 cin>>k;
 longitud=pow(2,k);
-longitudaux=pow(2,k-1);
+
 
 Matriz<int> MatrizA(longitud);
 Matriz<int> MatrizB(longitud);
@@ -53,53 +95,8 @@ addElementsMatrix(MatrizA,longitud);
 addElementsMatrix(MatrizB,longitud);
 cout<<endl;
 cout<<endl;
-//BLOQUE 1
-MatrizA.suma(0,0,1,1,t);
-MatrizB.suma(0,0,1,1,r);
-int I=t*r;
-//FIN BLOQUE 1
 
-//BLOQUE 2
-MatrizA.suma(1,0,1,1,t);
-r=MatrizB.getvalue(0,0);
-int II=t*r;
-//FIN BLOQUE 2
-
-//BLOQUE 3
-r=MatrizA.getvalue(0,0);
-MatrizB.resta(0,1,1,1,t);
-int III=t*r;
-//FIN BLOQUE 3
-
-//BLOQUE 4
-r=MatrizA.getvalue(1,1);
-MatrizB.resta(1,0,0,0,t);
-int IV=t*r;
-//FIN BLOQUE 4
-
-//BLOQUE 5
-MatrizA.suma(0,0,0,1,t);
-r=MatrizB.getvalue(1,1);
-int V=t*r;
-//FIN BLOQUE 5
-
-//BLOQUE 6
-MatrizA.resta(1,0,0,0,t);
-MatrizB.suma(0,0,0,1,r);
-int VI=t*r;
-//FIN BLOQUE 6
-
-//BLOQUE 7
-MatrizA.resta(0,1,1,1,t);
-MatrizB.suma(1,0,1,1,r);
-int VII=t*r;
-//FIN BLOQUE 7
-
-
-MatrizC.setvalue(0,0,(I+IV-V+VII));
-MatrizC.setvalue(0,1,(III+V));
-MatrizC.setvalue(1,0,(II+IV));
-MatrizC.setvalue(1,1,(I+III-II+VI));
+strassen(MatrizA,MatrizB,MatrizC);
 
 showMatrix(MatrizA,longitud);
 cout<<endl;
@@ -112,5 +109,3 @@ cout<<endl;
 cout<<endl;
 return 0;
 }
-
-
