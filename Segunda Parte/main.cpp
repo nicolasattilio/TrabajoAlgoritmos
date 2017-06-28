@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Matriz.h"
 #include <math.h>
+#include <cstdlib>
 
 using namespace std;
 
@@ -16,19 +17,24 @@ for(int i=0;i<longitud;i++)
 
 void fillMatrix(Matriz<int> & MatrizA,int longitud){
 for(int i=0;i<longitud;i++)
-    for(int j=0;j<longitud;j++)
-        MatrizA.setvalue(i,j,0);
+    for(int j=0;j<longitud;j++){
+        int r=rand() % 100;
+        MatrizA.setvalue(i,j,r);
+        }
 }
 
 void showMatrix(Matriz<int> MatrizA,int longitud){
+cout<<endl;
+cout<<endl;
 for(int i=0;i<longitud;i++){
     cout<<" "<<endl;
     for(int j=0;j<longitud;j++)
         cout<<MatrizA.getvalue(i,j)<<" ";
+
 }
 }
 
-void strassen(Matriz<int> MatrizA,Matriz<int> MatrizB,Matriz<int> MatrizC){
+void strassen(Matriz<int> MatrizA,Matriz<int> MatrizB,Matriz<int> & MatrizC){
 int t;
 int r;
 //BLOQUE 1
@@ -74,37 +80,37 @@ MatrizC.setvalue(1,1,(I+III-II+VI));
 
 }
 
+void divideAndConquestMatrix(Matriz<int> MatrizA,Matriz<int> MatrizB,Matriz<int> & MatrizC,int longitud){
+if (longitud<=2)
+    strassen(MatrizA,MatrizB,MatrizC);
+else{
+    /*divideAndConquestMatrix(MatrizA.subMatriz(A11),MatrizB.subMatriz(B11),matrizC,longitud-2);
+    divideAndConquestMatrix(MatrizA.subMatriz(A12),MatrizB.subMatriz(B12),matrizC,longitud-2);
+    divideAndConquestMatrix(MatrizA.subMatriz(A21),MatrizB.subMatriz(B21),matrizC,longitud-2);
+    divideAndConquestMatrix(MatrizA.subMatriz(A22),MatrizB.subMatriz(B22),matrizC,longitud-2);*/
+}
+}
+
 int main(){
-int longitud=0;
 int k=0;
-
-cout<<"Flaco pasame el tamanio de la matriz"<<endl;
+cout<<"Tamanio de la matriz ";
 cin>>k;
-longitud=pow(2,k);
-
-
+int longitud=pow(2,k);
 Matriz<int> MatrizA(longitud);
 Matriz<int> MatrizB(longitud);
 Matriz<int> MatrizC(longitud);
-
-
-//fillMatrix(MatrizA,longitud);
-//fillMatrix(MatrizB,longitud);
-
-addElementsMatrix(MatrizA,longitud);
-addElementsMatrix(MatrizB,longitud);
-cout<<endl;
-cout<<endl;
-
-strassen(MatrizA,MatrizB,MatrizC);
+//addElementsMatrix(MatrizA,longitud);
+fillMatrix(MatrizA,longitud);
+fillMatrix(MatrizB,longitud);
+//addElementsMatrix(MatrizB,longitud);
+divideAndConquestMatrix(MatrizA,MatrizB,MatrizC,longitud);
 
 showMatrix(MatrizA,longitud);
-cout<<endl;
-cout<<endl;
+cout<<"       <-- Matriz A";
 showMatrix(MatrizB,longitud);
-cout<<endl;
-cout<<endl;
+cout<<"       <-- Matriz B";
 showMatrix(MatrizC,longitud);
+cout<<"       <-- Matriz C";
 cout<<endl;
 cout<<endl;
 return 0;

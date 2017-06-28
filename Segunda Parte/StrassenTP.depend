@@ -31,3 +31,14 @@
 	"Matriz.h"
 	<cstddef>
 
+1498664918 source:c:\users\nico\desktop\facultad\trabajoalgoritmos\segunda parte\main.cpp
+	<iostream>
+	"Matriz.h"
+	<math.h>
+
+1498674148 c:\users\nico\desktop\facultad\trabajoalgoritmos\segunda parte\matriz.h
+
+1498664918 source:c:\users\nico\desktop\facultad\trabajoalgoritmos\segunda parte\matriz.cpp
+	"Matriz.h"
+	<cstddef>
+
