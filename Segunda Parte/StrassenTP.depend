@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1498515994 source:c:\users\mequi\desktop\facultad\aydalgo\proyectos\strassentp\main.cpp
+	<iostream>
+	"Matriz.h"
+
+1498514571 source:c:\users\mequi\desktop\facultad\aydalgo\proyectos\strassentp\matriz.cpp
+	"Matriz.h"
+	<cstddef>
+
+1498515419 c:\users\mequi\desktop\facultad\aydalgo\proyectos\strassentp\matriz.h
+
+1498596119 source:c:\users\paloma\desktop\strassentp\main.cpp
+	<iostream>
+	"Matriz.h"
+	<math.h>
+
+1498596287 c:\users\paloma\desktop\strassentp\matriz.h
+
+1498596556 source:c:\users\paloma\desktop\strassentp\matriz.cpp
+	"Matriz.h"
+	<cstddef>
+
