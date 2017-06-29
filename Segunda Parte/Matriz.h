@@ -9,10 +9,9 @@ public:
   ~Matriz();
   void setvalue(int i,int j,T elemento);
   T getvalue(int i,int j);
-  void suma(int i,int j,int k,int l,T & value);
-  void resta(int i,int j,int k,int l,T & value);
-  //void subMatrix(
-
+  void multi(Matriz MatrizA,Matriz MatrizB);
+  void suma(Matriz MatrizX,Matriz MatrizY,int longitud);
+  void resta(Matriz MatrizX,Matriz MatrizY,int longitud);
 private:
     T** matrix;
 

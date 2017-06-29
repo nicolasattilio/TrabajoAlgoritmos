@@ -30,33 +30,32 @@ T Matriz<T>::getvalue(int i,int j){
 
 
 template <typename T>
-void Matriz<T>::suma(int i,int j,int k,int l,T & value){
-    value=this->getvalue(i,j)+this->getvalue(k,l);
+void Matriz<T>::suma(Matriz MatrizX,Matriz MatrizY,int longitud){
+       for(int i=0; i<longitud; i++) {
+        for(int j=0; j<longitud; j++) {
+           this->setvalue(i,j,(MatrizX.getvalue(i,j)+MatrizY.getvalue(i,j)));
+        }
+     }
 }
 
 template <typename T>
-void Matriz<T>::resta(int i,int j,int k,int l,T & value){
-    value=this->getvalue(i,j)-this->getvalue(k,l);
+void Matriz<T>::resta(Matriz MatrizX,Matriz MatrizY,int longitud){
+    for(int i=0; i<longitud; i++) {
+        for(int j=0; j<longitud; j++) {
+           this->setvalue(i,j,(MatrizX.getvalue(i,j)-MatrizY.getvalue(i,j)));
+        }
+     }
 }
 
 
-/*
 template <typename T>
-void Matriz<T>::resta(T & MatrizA, T & MatrizC, int nFilas,int nColum){
-   for(int i=0;i<nFilas;i++){
-    for(int j=0;j<Matriz<int> MatrizA;
-    Matriz<int> MatrizB;
-    Matriz<int> MatrizC;nColum;j++)
-        MatrizC = (*(*Mat+i)+j) - (*(*MatrizA+i)+j);
-
-    }
+void Matriz<T>::multi(Matriz MatrizA,Matriz MatrizB){
+  for(int i=0; i<2; i++)
+        for(int j=0; j<2; j++) {
+           this->setvalue(i,j,0);
+           for(int t=0; t<2; t++)
+              this->setvalue(i,j,(this->getvalue(i,j) + MatrizA.getvalue(i,t)*MatrizB.getvalue(t,j)));
+           }
 }
 
-template <typename T>
-void Matriz<T>::multi(T & MatrizA, T & MatrizC, int nFilas, int nColum){
-  for(int i=0;i<nFilas;i++)
-    for(int j=0;j<nColum;j++)
-      MatrizC = (*(*Mat+i)+j) * (*(*MatrizA+i)+j);
-    }
-*/
 template class Matriz<int>;

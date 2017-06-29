@@ -20,14 +20,15 @@
 	"Matriz.h"
 	<cstddef>
 
-1498664545 source:c:\users\paloma\desktop\trabajoalgoritmos\segunda parte\main.cpp
+1498709775 source:c:\users\paloma\desktop\trabajoalgoritmos\segunda parte\main.cpp
 	<iostream>
 	"Matriz.h"
 	<math.h>
+	<cstdlib>
 
-1498664545 c:\users\paloma\desktop\trabajoalgoritmos\segunda parte\matriz.h
+1498709659 c:\users\paloma\desktop\trabajoalgoritmos\segunda parte\matriz.h
 
-1498664545 source:c:\users\paloma\desktop\trabajoalgoritmos\segunda parte\matriz.cpp
+1498709602 source:c:\users\paloma\desktop\trabajoalgoritmos\segunda parte\matriz.cpp
 	"Matriz.h"
 	<cstddef>
 
